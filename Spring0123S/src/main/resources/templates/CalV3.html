@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TEST V3</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"></link>
+</head>
+<body style="margin: 15px;">
+	<div class="container">
+		<div class="row justify-content-center">
+			<h3 th:text="${month}">MONTH</h3>
+			<h3 th:text="${year}">YEAR</h3>
+			<table class="table table-striped table-hover text-center">
+				<thead class="thead-dark">
+					<th>SUN</th>
+					<th>MON</th>
+					<th>TUE</th>
+					<th>WED</th>
+					<th>THU</th>
+					<th>FRI</th>
+					<th>SAT</th>
+				</thead>
+				<tbody>
+					<tr th:each="obj:${data}">
+						<td th:utext="${obj[0]}"></td>
+						<td th:utext="${obj[1]}"></td>
+						<td th:utext="${obj[2]}"></td>
+						<td th:utext="${obj[3]}"></td>
+						<td th:utext="${obj[4]}"></td>
+						<td th:utext="${obj[5]}"></td>
+						<td th:utext="${obj[6]}"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<dl class="row">
+			<dt class="col-3 text-right">CONTROLLER:</dt>
+			<dd class="col-9" th:text="${controller}"></dd>
+			<dt class="col-3 text-right">ID:</dt>
+			<dd class="col-9" th:text="${id}"></dd>
+			<dt class="col-3 text-right">NAME:</dt>
+			<dd class="col-9" th:text="${name}"></dd>
+			<dt class="col-3 text-right">BIRTHDAY:</dt>
+			<dd class="col-9" th:text="${birthday}"></dd>
+		</dl>
+	</div>
+</body>
+</html>
