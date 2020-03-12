@@ -18,7 +18,7 @@ public class MainController266 {
 		student.name = "TRAN TRONG HOAI"; // your name
 		student.birthday_m = 7; // your birthday month
 		student.birthday_d = 28; // your birthday day
-
+//test github
 		model.addAttribute("id", student.id);
 		model.addAttribute("name", student.name);
 		model.addAttribute("birthday", student.birthday_m + "/" + student.birthday_d);
